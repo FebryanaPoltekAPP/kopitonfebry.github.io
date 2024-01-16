@@ -1,0 +1,304 @@
+---
+title: "Pengaruh Nilai Tukar dan Total Produksi Terhadap Nilai Ekpor Kopi Indonesia."
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Febryana Nur Raharjo"
+date: 2024-01-15
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+![](poltekapp.jpg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Indonesia, sebagai salah satu produsen kopi terbesar di dunia, memiliki peran penting dalam pasar kopi global. Nilai ekspor kopi Indonesia dipengaruhi oleh berbagai faktor, termasuk Nilai Tukar, Harga Jual per Ton, Total Produksi, dan Volume Ekspor. Penelitian ini bertujuan untuk menganalisis pengaruh variabel-variabel tersebut terhadap Nilai Ekspor Kopi Indonesia.
+
+Pertama, Nilai Tukar dapat mempengaruhi daya saing produk ekspor, termasuk kopi. Fluktuasi nilai tukar bisa berdampak pada harga ekspor dan impor, yang pada gilirannya mempengaruhi volume dan nilai ekspor.
+
+Kedua, Harga Jual per Ton juga menjadi faktor penting. Harga jual yang tinggi dapat meningkatkan nilai ekspor, asalkan hal ini tidak berdampak negatif pada volume ekspor.
+
+Ketiga, Total Produksi Kopi di Indonesia berpotensi mempengaruhi nilai ekspor. Produksi yang lebih tinggi dapat meningkatkan volume ekspor, asalkan permintaan global tetap kuat.
+
+Terakhir, Volume Ekspor juga mempengaruhi Nilai Ekspor. Volume ekspor yang lebih tinggi akan meningkatkan nilai ekspor, asalkan harga jual per ton tetap stabil.
+
+Penelitian ini akan menggunakan metode regresi linear berganda untuk menganalisis pengaruh variabel-variabel tersebut. Penelitian ini diharapkan dapat memberikan wawasan baru bagi mahasiswa dan peneliti lainnya yang tertarik pada topik ini.
+
+### Ruang lingkup
+
+Ruang lingkup penelitian ini mencakup beberapa aspek berikut:
+
+1. **Variabel Penelitian**: Penelitian ini akan fokus pada empat variabel utama, yaitu Nilai Tukar, Harga Jual per Ton, Total Produksi, dan Volume Ekspor. Analisis akan dilakukan untuk menentukan bagaimana variabel-variabel ini mempengaruhi Nilai Ekspor Kopi Indonesia.
+
+2. **Metodologi**: Penelitian ini akan menggunakan metode regresi linear berganda. Metode ini dipilih karena dapat mengukur pengaruh simultan dari beberapa variabel independen terhadap variabel dependen.
+
+3. **Data**: Data yang digunakan dalam penelitian ini akan mencakup data historis terkait variabel-variabel yang disebutkan di atas. Sumber data akan dipilih berdasarkan ketersediaan dan keandalan data.
+
+4. **Batasan**: Penelitian ini tidak akan membahas peran pemerintah dan kebijakan terkait dalam pengaruh terhadap Nilai Ekspor Kopi Indonesia. Fokus penelitian ini adalah pada faktor-faktor pasar dan produksi.
+
+5. **Aplikasi**: Hasil penelitian ini diharapkan dapat memberikan wawasan baru bagi mahasiswa dan peneliti lainnya yang tertarik pada topik ini. Selain itu, hasil penelitian ini juga dapat bermanfaat bagi pelaku industri kopi di Indonesia untuk memahami dinamika pasar dan produksi lebih baik. 
+
+### Rumusan masalah
+
+Berikut adalah rumusan masalah yang dapat diangkat berdasarkan topik penelitian Anda:
+
+1. Bagaimana pengaruh Nilai Tukar terhadap Nilai Ekspor Kopi Indonesia?
+2. Apakah Harga Jual per Ton memiliki dampak signifikan terhadap Nilai Ekspor Kopi Indonesia?
+3. Sejauh mana Total Produksi Kopi di Indonesia mempengaruhi Nilai Ekspor Kopi Indonesia?
+4. Bagaimana hubungan antara Volume Ekspor dan Nilai Ekspor Kopi Indonesia?
+
+Rumusan masalah ini bertujuan untuk memahami lebih dalam tentang faktor-faktor yang mempengaruhi Nilai Ekspor Kopi Indonesia. Penelitian ini akan menggunakan metode regresi linear berganda untuk menganalisis hubungan antara variabel-variabel tersebut.
+
+### Tujuan dan manfaat penelitian
+
+Berikut adalah tujuan dan manfaat penelitian yang diusulkan:
+
+**Tujuan Penelitian:**
+
+1. **Nilai Tukar**: Untuk mengetahui pengaruh Nilai Tukar terhadap Nilai Ekspor Kopi Indonesia dan memberikan pemahaman lebih dalam tentang bagaimana fluktuasi nilai tukar dapat mempengaruhi ekonomi ekspor.
+2. **Harga Jual per Ton**: Untuk menganalisis bagaimana Harga Jual per Ton mempengaruhi Nilai Ekspor Kopi Indonesia dan memberikan wawasan tentang pentingnya penentuan harga dalam strategi ekspor.
+3. **Total Produksi**: Untuk mengevaluasi bagaimana Total Produksi Kopi di Indonesia mempengaruhi Nilai Ekspor Kopi Indonesia dan memberikan pemahaman lebih lanjut tentang hubungan antara produksi dan ekspor.
+4. **Volume Ekspor**: Untuk menentukan bagaimana Volume Ekspor mempengaruhi Nilai Ekspor Kopi Indonesia dan memberikan pemahaman lebih lanjut tentang dinamika volume dan nilai ekspor.
+5. **Metode Analisis**: Untuk menerapkan metode regresi linear berganda dalam menganalisis data, memberikan pemahaman praktis tentang bagaimana metode ini dapat digunakan dalam penelitian ekonomi.
+
+**Manfaat Penelitian:**
+
+1. **Bagi Mahasiswa**: Hasil penelitian ini dapat memberikan wawasan baru bagi mahasiswa yang tertarik pada topik ini dan dapat digunakan sebagai referensi untuk penelitian lebih lanjut.
+
+2. **Bagi Peneliti**: Penelitian ini dapat memberikan kontribusi pada literatur yang ada dan membantu peneliti lain dalam memahami faktor-faktor yang mempengaruhi Nilai Ekspor Kopi Indonesia.
+
+3. **Bagi Industri Kopi**: Hasil penelitian ini dapat membantu pelaku industri kopi di Indonesia untuk memahami lebih baik tentang dinamika pasar dan produksi, dan dapat digunakan dalam merumuskan strategi ekspor yang lebih efektif.
+
+### Package
+
+```{r}
+#| warning: false
+#| echo: true
+setwd("D:/METOPEL UAS/FEBRY METOPEL")
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+```
+
+## Studi pustaka
+
+Ekspor menurut keputusan mentri perindustrian dan perdagangan Nomor
+182/MPP/Kep/4/1998 ketentuan umum di Bidang Ekspor, menyatakan bahwa
+ekspor merupakan kegiatan mengeluarkan barang dan jasa dari daerah
+pabean suatu negara. Adapun daerah pabean di definisikan sebagai wilayah
+Republik Indonesia yang meliputi wilayah darat, perairan dan ruang udara
+di atasnya, serta tempat-tempat tertentu di zona ekonomi eksklusif dan
+landas kontinen yang di dalamnya berlaku undang undang No.10 tahun 1995
+tentang Kepabean.
+
+Menurut definisi lain, ekspor merupakan penjualan barang dan jasa secara
+luas dari dalam negeri ke luar negeri (Mankiw, 2006).
+
+Sedangkan menurut Priadi (2000) kegiatan ekspor merupakan sistem
+perdagangan yang dilakukan dengan cara mengeluarkan barang-barang dari
+dalam negeri ke luar negeri berdasarkan ketentuan yang berlaku.
+
+Kurs dapat dijadikan alat untuk mengukur kondisi perekonomian suatu
+negara. Pertumbuhan nilai mata uang yang stabil menunjukkan bahwa negara
+tersebut memiliki kondisi ekonomi yang relatif baik. (Salvator, 1997).
+
+Kopi merupakan salah satu komoditas satu komoditas perkebunan yang
+diharapkan mampu meningkatkan nilai ekspor. Brazil masih mendominasi produksi
+kopi dunia sekaligus sebagai penyumbang terbesar kopi dunia sebesar 35,8% dari total produksi dunia. (Dwi, 2010)
+
+Komoditi Kopi ini agar dapat mampu bersaing di pasar internasional
+maka Indonesia harus mempertahankan mutu dari komoditi Kopi tersebut dengan
+menggunakan bibit unggul dan memiliki kualitas yang tinggi sehingga produksi Kopi
+Indonesia ini diharapkan bisa stabil dan akan meningkat disetiap tahunya. Dalam
+perdagangan international terutama pada kegiatan ekspor, salah satu yang dapat
+mempengaruhi tinggi rendahnya nilai ekspor kopi yaitu harga. Harga yang berlaku di
+pasar internasional memiliki pengaruh dalam tolak ukur daya beli penduduk dunia
+dalam mengkonsumsi kopi. 
+
+Nilai tukar rupiah (Kurs) sangat berpengaruh pada kegiatan
+ekspor, transaksi ekspor berakibat pada adanya uang masuk ke Indonesia dalam mata
+uang asing. 
+
+Amerika Serikat merupakan Negara pengimpor kopi terbesar dari Indonesia
+di bandingkan dengan negara-negara lain. Berdasarkan data yang dihimpun dari Badan
+Pusat Statistik (BPS) produk domestik bruto Amerika mengalami perubahan yang
+berfluktuasi setiap tahunya. Ini diakibatkan dengan adanya gejala-gejala yang terjadi pada negara tersebut.
+
+
+## Metode penelitian
+
+### Data
+
+| tahun |    volt   |          ekspor         |            kurs           |   prodt  |  hargat  |
+|:-----:|:---------:|:-----------------------:|:-------------------------:|:--------:|:--------:|
+| 2000  | 326256,0  |  Rp   3.252.713.635,00  |  Rp             9.595,00  | 544574   | 8731450  |
+| 2001  | 346940,6  |  Rp   3.614.740.662,58  |  Rp           10.400,00   | 569624,4 | 6262260  |
+| 2002  | 368936,7  |  Rp   4.017.061.298,32  |  Rp             8.940,00  | 595827,1 | 6112260  |
+| 2003  | 392327,3  |  Rp   4.464.160.220,82  |  Rp             8.465,00  | 623235,2 | 6706983  |
+| 2004  | 417200,8  |  Rp   4.961.021.253,40  |  Rp             9.290,00  | 651904   | 7359572  |
+| 2005  | 443651,3  |  Rp   5.513.182.918,90  |  Rp             9.830,00  | 681891,6 | 8075659  |
+| 2006  | 471778,8  |  Rp   6.126.800.177,78  |  Rp             9.020,00  | 713258,6 | 8861420  |
+| 2007  | 501689,6  |  Rp   6.808.713.037,57  |  Rp             9.419,00  | 746068,5 | 9723637  |
+| 2008  | 533496,7  |  Rp   7.566.522.798,65  |  Rp           10.950,00   | 780387,6 | 10669746 |
+| 2009  | 567320,4  |  Rp   8.408.676.786,14  |  Rp             9.400,00  | 816285,5 | 11707913 |
+| 2010  | 603288,5  |  Rp   9.344.562.512,43  |  Rp             8.991,00  | 853834,6 | 12847093 |
+| 2011  | 641537,0  |  Rp 10.384.612.320,07   |  Rp             9.068,00  | 893111   | 14097115 |
+| 2012  | 682210,5  |  Rp 11.540.419.671,29   |  Rp             9.670,00  | 934194,1 | 15468764 |
+| 2013  | 725462,6  |  Rp 12.824.868.380,70   |  Rp           12.189,00   | 977167   | 16973875 |
+| 2014  | 771456,9  |  Rp 14.252.276.231,48   |  Rp           12.440,00   | 1022117  | 18625433 |
+| 2015  | 820367,3  |  Rp 15.838.554.576,04   |  Rp           13.795,00   | 1069134  | 20437687 |
+| 2016  | 872378,6  |  Rp 17.601.385.700,35   |  Rp           13.436,00   | 1118314  | 22426274 |
+| 2017  | 927687,4  |  Rp 19.560.419.928,80   |  Rp           13.548,00   | 1169757  | 24608351 |
+| 2018  | 986502,8  |  Rp 21.737.494.666,88   |  Rp           13.892,12   | 1223566  | 27002743 |
+| 2019  | 1049047,1 |  Rp 24.156.877.823,30   |  Rp           14.244,98   | 1279850  | 29630110 |
+| 2020  | 1115556,6 |  Rp 26.845.538.325,03   |  Rp           14.606,80   | 1338723  | 32513120 |
+| 2021  | 1186282,9 |  Rp 29.833.446.740,61   |  Rp           14.977,81   | 1400304  | 35676646 |
+| 2022  | 1261493,3 |  Rp 33.153.909.362,84   |  Rp           15.358,25   | 1464718  | 39147984 |
+
+Penelitian ini berfokus pada analisis pengaruh Nilai Tukar, Harga Jual per Ton, Total Produksi, dan Volume Ekspor terhadap Nilai Ekspor Kopi Indonesia. Dengan menggunakan metode regresi linear berganda, penelitian ini bertujuan untuk memahami bagaimana variabel-variabel tersebut mempengaruhi nilai ekspor kopi dari Indonesia. Penelitian ini tidak akan membahas peran pemerintah dan kebijakan terkait, dan akan fokus hanya pada analisis faktor-faktor yang telah disebutkan. Hasil dari penelitian ini diharapkan dapat memberikan wawasan baru bagi mahasiswa dan peneliti lainnya yang tertarik pada topik ini, serta membantu pelaku industri kopi di Indonesia untuk memahami lebih baik tentang dinamika pasar dan produksi.
+
+### Metode analisis
+
+Model regresi linear berganda yang akan digunakan dalam penelitian ini dapat dirumuskan sebagai berikut:
+
+$$ Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon $$
+
+dimana:
+- $Y$ adalah Nilai Ekspor Kopi Indonesia.
+- $X_1$ adalah Nilai Tukar.
+- $X_2$ adalah Harga Jual per Ton.
+- $X_3$ adalah Total Produksi Kopi di Indonesia.
+- $X_4$ adalah Volume Ekspor.
+- $\beta_0$ adalah konstanta.
+dan - $e$ adalah nilai error
+
+## Pembahasan
+
+### Pembahasan masalah
+
+#### Plot dan Data
+
+```{r}
+#impor dataset
+read_excel("kopi2.xlsx")
+dat <- read_excel("kopi2.xlsx")
+kbl(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+reg1<-lm(ekspor~volt+kurs+prodt+hargat,data=dat)
+```
+
+# Plot 
+```{r}
+plot(dat$tahun,dat$ekspor,xlab="Tahun",ylab="Nilai Ekspor Kopi Indonesia")
+```
+
+```{r}
+plot(dat$tahun,dat$volt,xlab="Tahun",ylab="Volume Ekspor Kopi Indonesia (Ton)")
+```
+
+```{r}
+plot(dat$tahun,dat$hargat,xlab="Tahun",ylab="Harga jual per ton")
+```
+
+```{r}
+plot(dat$tahun,dat$kurs,xlab="Tahun",ylab="Nilai Tukar RP/USD")
+```
+
+```{r}
+plot(dat$tahun,dat$prodt,xlab="Tahun",ylab="Produksi Kopi Indonesia (ton)")
+```
+# Plot Error
+
+```{r}
+dat$m<-resid(reg1)
+plot(dat$ekspor,dat$m,xlab="Nilai Ekspor Kopi ",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+
+```{r}
+dat$m<-resid(reg1)
+plot(dat$volt,dat$m,xlab="Volume Ekspor (ton)",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+
+```{r}
+dat$m<-resid(reg1)
+plot(dat$hargat,dat$m,xlab="Harga jual per Ton",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+
+```{r}
+dat$m<-resid(reg1)
+plot(dat$kurs,dat$m,xlab="Nilai Tukar RP/USD",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+
+```{r}
+dat$m<-resid(reg1)
+plot(dat$prodt,dat$m,xlab="Produksi Kopi Indonesia (ton)",ylab="error")
+abline(h=0) # membuat garis horizontal di y=0
+```
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+```{r}
+summary(reg1)
+```
+
+Hasil analisis regresi menunjukkan bahwa model yang digunakan sangat baik dalam menjelaskan variabel dependen, dengan nilai R-squared sebesar **0,9999**. Ini berarti bahwa **99,99%** variasi dalam Nilai Ekspor Kopi Indonesia dapat dijelaskan oleh variabel-variabel dalam model ini.
+
+Intercept model bernilai **1,284**, yang berarti bahwa jika semua variabel independen bernilai nol, maka Nilai Ekspor Kopi Indonesia akan bernilai 1,284. Nilai ini sangat signifikan, menunjukkan bahwa model memiliki titik awal yang valid.
+
+Variabel Volume Ekspor memiliki koefisien **1,202**, yang berarti bahwa peningkatan satu unit dalam Volume Ekspor akan meningkatkan Nilai Ekspor Kopi Indonesia sebesar 1,202. Nilai ini sangat signifikan, menunjukkan bahwa Volume Ekspor memiliki pengaruh positif yang kuat terhadap Nilai Ekspor Kopi Indonesia.
+
+Variabel Nilai Tukar memiliki koefisien **-6,987**, yang berarti bahwa peningkatan satu unit dalam Nilai Tukar akan menurunkan Nilai Ekspor Kopi Indonesia sebesar 6,987. Nilai ini signifikan, menunjukkan bahwa Nilai Tukar memiliki pengaruh negatif terhadap Nilai Ekspor Kopi Indonesia.
+
+Variabel Total Produksi Kopi memiliki koefisien **-8,730**, yang berarti bahwa peningkatan satu unit dalam Total Produksi Kopi akan menurunkan Nilai Ekspor Kopi Indonesia sebesar 8,730. Nilai ini sangat signifikan, menunjukkan bahwa Total Produksi Kopi memiliki pengaruh negatif yang kuat terhadap Nilai Ekspor Kopi Indonesia.
+
+Akhirnya, Variabel Harga Jual per Ton memiliki koefisien **-6,479**, yang berarti bahwa peningkatan satu unit dalam Harga Jual per Ton akan menurunkan Nilai Ekspor Kopi Indonesia sebesar 6,479. Nilai ini sedikit signifikan, menunjukkan bahwa Harga Jual per Ton memiliki pengaruh negatif terhadap Nilai Ekspor Kopi Indonesia, tetapi pengaruh ini tidak sekuat variabel lainnya dalam model. 
+
+Secara keseluruhan, hasil ini memberikan wawasan yang berharga tentang faktor-faktor yang mempengaruhi Nilai Ekspor Kopi Indonesia.
+
+##Kesimpulan
+
+Berdasarkan hasil analisis regresi, dapat disimpulkan bahwa Nilai Tukar, Harga Jual per Ton, Total Produksi, dan Volume Ekspor memiliki pengaruh signifikan terhadap Nilai Ekspor Kopi Indonesia. Model regresi yang digunakan sangat baik dalam menjelaskan variabel dependen, dengan nilai R-squared sebesar 0,9999, yang berarti 99,99% variasi dalam Nilai Ekspor Kopi Indonesia dapat dijelaskan oleh variabel-variabel dalam model ini.
+
+Interpretasi koefisien regresi menunjukkan bahwa Volume Ekspor dan Nilai Tukar memiliki pengaruh positif terhadap Nilai Ekspor Kopi Indonesia, sedangkan Harga Jual per Ton dan Total Produksi memiliki pengaruh negatif. Hal ini mungkin disebabkan oleh beberapa alasan:
+
+1. **Volume Ekspor**: Peningkatan volume ekspor berarti lebih banyak kopi yang diekspor, yang secara langsung akan meningkatkan nilai ekspor.
+2. **Nilai Tukar**: Nilai tukar yang lebih tinggi dapat membuat produk ekspor lebih murah bagi pembeli asing, yang dapat meningkatkan permintaan dan akhirnya meningkatkan nilai ekspor.
+3. **Harga Jual per Ton**: Harga jual yang lebih tinggi dapat membuat kopi Indonesia kurang kompetitif di pasar internasional, yang dapat menurunkan permintaan dan akhirnya menurunkan nilai ekspor.
+4. **Total Produksi**: Produksi kopi yang lebih tinggi dapat menyebabkan penawaran melebihi permintaan, yang dapat menurunkan harga dan akhirnya menurunkan nilai ekspor.
+
+Namun, perlu diingat bahwa ini hanyalah asumsi berdasarkan hasil analisis regresi dan mungkin memerlukan penelitian lebih lanjut untuk validasi. Selain itu, meskipun model ini memiliki nilai R-squared yang tinggi, masih ada 0,01% variasi dalam Nilai Ekspor Kopi Indonesia yang tidak dijelaskan oleh model ini, yang mungkin disebabkan oleh faktor-faktor lain yang tidak dimasukkan dalam model ini.
+
+## Referensi
+ttp://www.fao.org/faostat/en/.
+
+Pengantar Ekonomi Makro oleh Sadono Sukirno, Edisi Keempat (2023)
+
+Ekonomi Makro oleh Sadono Sukirno dan Sadono Anwar, Edisi Ketiga (2022)
+
+Ekonomi Makro oleh Mankiw, Gregory N., Edisi Keempat (2022)
+
+Badan Pusat Statistik (2012). Statistik perkebunan 2012. Badan Pusat Statistik.
+
+Widayanti. (2009). Analisis Ekspor Kopi Indonesia. Jurnal Wacana. Vol.12, No.1.
+
+Winardi. (2003). Pengantar Ekonomi Mikro (Teori Harga), CV. Mandar Maju:
+
+Direktorat Jendral Perkebunan. (2015). Statistik Perkebunan Indonesia: Jakarta
+
+Dwi, sinta. (2010). Ekspor Kopi Indonesia dan Faktor-faktor yang mempengaruhinya.
+Skripsi, Fakultas Ekonomi: UNJA.
+
+Gilarso, T. (1992). Pengantar Ilmu Ekonomi Bagian Makro. Kanisius: Yogyakarta.
+Bandung
